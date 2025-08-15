@@ -1,8 +1,9 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager : MonoBehaviour
+public class ButtonManager : ACBehaviour
 {
     public enum MenuPage { Main, Options, Credits }
     public MenuPage currentPage;
@@ -19,8 +20,24 @@ public class ButtonManager : MonoBehaviour
     public void BXLoadMenu() => BXLoadScene("Menu");
     public void BXLoadPage(int pageNum)
     {
-        GetCurrentPage().SetActive(false);
-        SetPage(pageNum);
+        ACExecAfterFrames(5, () => {
+            GetCurrentPage().SetActive(false);
+            SetPage(pageNum);
+        });
+        
+    }
+
+    private IEnumerator ExecAfterSeconds(Action action, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        action();
+    }
+    private IEnumerator ExecAfterFrames(Action action, int frames)
+    {
+        int n = frames - 1;
+        yield return new WaitForEndOfFrame();
+        if (n !<= 0) ExecAfterFrames(action, n);
+        else action();
     }
 
     private GameObject GetCurrentPage()
