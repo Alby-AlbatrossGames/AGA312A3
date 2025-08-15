@@ -1,9 +1,11 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using DG.Tweening;
 
 public class ACBehaviour : MonoBehaviour
 {
+    #region ACExec()
     /// <summary>
     /// Executes the function on the next frame.
     /// "ACExecNextFrame( () => {func} )"
@@ -49,6 +51,27 @@ public class ACBehaviour : MonoBehaviour
     }
     #endregion ACExec() Coroutines
 
+    #endregion ACExec()
+
+    #region DoTween
+
+    /// <summary>
+    /// Grows or Shrinks the Target towards the desired Scale over time. Useful for UI.
+    /// </summary>
+    /// <param name="rect">Target RectTransform (NOT Transform)</param>
+    /// <param name="scale">Target scale to adjust towards</param>
+    /// <param name="time">Seconds to take to reach target scale</param>
+    public void ACDoScale(RectTransform rect, float scale, float time, bool unscaledTime = false) => rect.DOScale(scale, time).SetUpdate(unscaledTime);
+
+    /// <summary>
+    /// Grows or Shrinks the Target towards the desired Scale over time. Useful for UI.
+    /// </summary>
+    /// <param name="obj">Target GameObject with RectTransform component (NOT Transform)</param>
+    /// <param name="scale">Target scale to adjust towards</param>
+    /// <param name="time">Seconds to take to reach target scale</param>
+    public void ACDoScale(GameObject obj, float scale, float time, bool unscaledTime = false) => ACDoScale(obj.GetComponent<RectTransform>(), scale, time, unscaledTime);
+
+    #endregion DoTween
 }
 
 #region Code to make this script visible to others

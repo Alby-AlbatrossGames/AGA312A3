@@ -15,9 +15,6 @@ public class ButtonManager : ACBehaviour
     {
         currentPage = MenuPage.Main;
     }
-    public void BXQuitApp() => Application.Quit();
-    public void BXLoadScene(string scene) => SceneManager.LoadScene(scene);
-    public void BXLoadMenu() => BXLoadScene("Menu");
     public void BXLoadPage(int pageNum)
     {
         ACExecAfterFrames(5, () => {
@@ -25,19 +22,6 @@ public class ButtonManager : ACBehaviour
             SetPage(pageNum);
         });
         
-    }
-
-    private IEnumerator ExecAfterSeconds(Action action, float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        action();
-    }
-    private IEnumerator ExecAfterFrames(Action action, int frames)
-    {
-        int n = frames - 1;
-        yield return new WaitForEndOfFrame();
-        if (n !<= 0) ExecAfterFrames(action, n);
-        else action();
     }
 
     private GameObject GetCurrentPage()
