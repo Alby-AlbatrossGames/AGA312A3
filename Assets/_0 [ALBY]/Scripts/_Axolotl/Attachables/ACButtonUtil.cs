@@ -17,6 +17,10 @@ public class ACButtonUtil : ACBehaviour
     public void ACBUTTONReloadScene() => ACBUTTONLoadScene(SceneManager.GetActiveScene().name);
     #endregion Scene Management
 
+    #region ACEvents
+    public void ACBUTTONTogglePause() => ACEvents.ReportOnPauseButtonPress();
+    #endregion ACEvents
+
     #region Animations
     public void ACBUTTONDoScale(float scale) => ACDoScale(GetComponent<RectTransform>(), scale, animationDuration, useUnscaledTime);
     #endregion Animations
