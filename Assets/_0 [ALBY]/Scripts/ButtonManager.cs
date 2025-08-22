@@ -55,4 +55,7 @@ public class ButtonManager : ACBehaviour
                 return;
         }
     }
+
+    private void OnEnable() => Cursor.lockState = CursorLockMode.Confined;
+    private void OnDisable() => Cursor.lockState -= CursorLockMode.Locked;
 }
