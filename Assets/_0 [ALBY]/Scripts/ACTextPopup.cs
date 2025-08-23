@@ -9,21 +9,18 @@ public class ACTextPopup : MonoBehaviour
     [SerializeField] public UnityEvent onPressAction;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) popup.SetActive(true);
+        if (other.CompareTag("Player"))
+        {
+            popup.SetActive(true);
+            GlobalEvents.ReportToggleInteract();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) popup.SetActive(false);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
         if (other.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(actionKey))
-            {
-                onPressAction.Invoke();
-            }
+            popup.SetActive(false);
+            GlobalEvents.ReportToggleInteract();
         }
     }
 }
