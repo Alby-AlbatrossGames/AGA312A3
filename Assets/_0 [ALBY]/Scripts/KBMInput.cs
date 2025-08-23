@@ -17,13 +17,14 @@ public class KBMInput : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+                var ray = Camera.main.ScreenPointToRay(new Vector3( (Screen.width / 8) * 3, Screen.height / 2));
                 RaycastHit hit;
+                LayerMask mask = LayerMask.GetMask("Interactibles");
 
-                if (Physics.Raycast(ray, out hit, 1000))
+                if (Physics.Raycast(ray, out hit, 1000, mask))
                 {
-                    Debug.Log(hit.collider.gameObject.name);
-                    Debug.DrawLine(ray.origin, hit.point);
+                    Debug.Log(hit.collider.gameObject.name+", "+hit.collider.gameObject.layer);
+                    hit.collider.gameObject.GetComponent<ACTextPopup>().BroadcastMessage("OnPlayerInteract");
                 }
             }
         }

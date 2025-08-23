@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class ACTextPopup : MonoBehaviour
 {
     [SerializeField] public GameObject popup;
-    [SerializeField] public KeyCode actionKey;
     [SerializeField] public UnityEvent onPressAction;
     private void OnTriggerEnter(Collider other)
     {
@@ -23,4 +22,6 @@ public class ACTextPopup : MonoBehaviour
             GlobalEvents.ReportToggleInteract();
         }
     }
+
+    private void OnPlayerInteract() => onPressAction?.Invoke();
 }

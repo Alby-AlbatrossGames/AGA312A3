@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 8353280830814057262}
   - component: {fileID: 8609426798584103117}
   - component: {fileID: 7952773798691217783}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Popup Radius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,6 +566,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 9049014996085864912}
+  actionKey: 0
+  onPressAction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8609426798584103117
 MonoBehaviour:
   m_ObjectHideFlags: 0
