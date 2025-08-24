@@ -24,6 +24,7 @@ public class DoorAnimator : MonoBehaviour
     public TMP_Text popup;
     public TMP_Text key;
 
+    private void Start() => UnlockDoor();
     public void ToggleDoors()
     {
         Debug.LogWarning("ToggleDoors Ran");
