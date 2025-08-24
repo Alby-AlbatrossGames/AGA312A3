@@ -63129,6 +63129,18 @@ PrefabInstance:
       propertyPath: useUnscaledTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1222497111700348930, guid: 9366d7326f076364e968c1db44520c72, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222497111700348930, guid: 9366d7326f076364e968c1db44520c72, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ACBUTTONLoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222497111700348930, guid: 9366d7326f076364e968c1db44520c72, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 1462755418990655391, guid: 9366d7326f076364e968c1db44520c72, type: 3}
       propertyPath: useUnscaledTime
       value: 1
@@ -64638,7 +64650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -425.025}
+  m_AnchoredPosition: {x: 540, y: -403}
   m_SizeDelta: {x: 1080, y: 540.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980648490
@@ -64664,7 +64676,15 @@ MonoBehaviour:
   m_text: 'This is the end of the Demo, please leave all feedback whether positive
     or negative
 
-    :)'
+    :)
+
+
+    Coming Soon:
+
+    - Puzzle rooms in halls to the left
+    and right
+
+    - Escape Pod in room opposite tutorial exit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -64691,10 +64711,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSize: 49.86
+  m_fontSizeBase: 49.86
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0.1
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -67605,7 +67625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -89}
+  m_AnchoredPosition: {x: 540, y: -45}
   m_SizeDelta: {x: 1080, y: 81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!223 &8743880210840835937
@@ -67649,7 +67669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
