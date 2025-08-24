@@ -43,7 +43,6 @@ public class PressurePad : MonoBehaviour
     }
     void ChangeMaterial(Material mat) => mainBtn.material = mat;
 
-    // ---------- Code below should be on a diff script --------//
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) OnActivate();
