@@ -11,7 +11,7 @@ public class DoorAnimator : MonoBehaviour
     [SerializeField] private GameObject doorRightClosedPos;
     [SerializeField] private GameObject doorRightOpenPos;
     [SerializeField] private float duration;
-    private bool isOpen = false;
+    public bool isOpen = false;
     [Header("Core")]
     public bool isLockedA = true;
     public bool isLockedB = true;
@@ -25,6 +25,14 @@ public class DoorAnimator : MonoBehaviour
     public TMP_Text key;
 
     private void Start() => UnlockDoor();
+    public void ToggleDoorsOverride()
+    {
+        switch (isOpen)
+        {
+            case true: CloseDoors(); break;
+            case false: OpenDoors(); break;
+        }
+    }
     public void ToggleDoors()
     {
         Debug.LogWarning("ToggleDoors Ran");
