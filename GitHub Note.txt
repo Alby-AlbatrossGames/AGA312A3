@@ -1,0 +1,6 @@
+27/08/2025
+	Changed Project Name:
+		[AGA316A3] -> [AGA312A3]
+	Changed Unity Folder Name:
+		[/AGA316A3/etc.] -> [/AGA312A3/etc.]
+----------
