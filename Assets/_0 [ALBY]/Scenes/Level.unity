@@ -7531,6 +7531,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1802401224}
     m_Modifications:
+    - target: {fileID: 677172910600300021, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 677172910600300021, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 723711673476725574, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -7603,6 +7611,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 3795946607636925402, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795946607636925402, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4517506108992876153, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: m_Name
       value: Exit Door
@@ -7646,6 +7662,14 @@ PrefabInstance:
     - target: {fileID: 6255023780960513401, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343546745341007103, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343546745341007103, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7169210387731235914, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: target
@@ -9011,6 +9035,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1323825931}
     m_Modifications:
+    - target: {fileID: 677172910600300021, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 677172910600300021, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 723711673476725574, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -9083,6 +9115,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 3795946607636925402, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795946607636925402, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4340243560228061593, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: Priority
       value: 0
@@ -9150,6 +9190,14 @@ PrefabInstance:
     - target: {fileID: 6255023780960285017, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343546745341007103, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343546745341007103, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7169210387731235914, guid: e7febc97cbd07ad4084fc29bc300f3ea, type: 3}
       propertyPath: target
