@@ -1,6 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DoorAnimator : MonoBehaviour
 { 
@@ -23,6 +24,9 @@ public class DoorAnimator : MonoBehaviour
     [Header("Popup")]
     public TMP_Text popup;
     public TMP_Text key;
+    [Header("Events")]
+    public UnityEvent OnSingleUnlock;
+    public UnityEvent OnFullUnlock;
 
     private void Start() => UnlockDoor();
     public void ToggleDoorsOverride()
@@ -86,6 +90,9 @@ public class DoorAnimator : MonoBehaviour
                 B2.color = Color.green;
                 break;
         }
+
+        if (!isLockedA && !isLockedB) { OnFullUnlock.Invoke(); } else { OnSingleUnlock.Invoke(); }
+
         UnlockDoor();
     }
     public void UnlockDoor()

@@ -26,16 +26,20 @@ public class PressurePad : MonoBehaviour
     private void Start() => mainBtn = mainButtonOBJ.GetComponent<Renderer>();
     public void OnActivate()
     {
-        AnimatePad(activePos, activeLightClr, activeBtnMat);
-        OnPressed.Invoke();
+        AnimatePad(activePos, activeLightClr, activeBtnMat, true);
     }
     public void OnDeactivate()
     {
-        AnimatePad(inactivePos, inactiveLightClr, inactiveBtnMat);
-        OnReleased.Invoke();
+        AnimatePad(inactivePos, inactiveLightClr, inactiveBtnMat, false);
     }
 
-    void AnimatePad(float newPos, Color clr, Material mat) => mainButtonOBJ.transform.DOLocalMoveY(newPos, 0.3f).OnComplete(() => { ChangeLights(clr); ChangeMaterial(mat); });
+    void AnimatePad(float newPos, Color clr, Material mat, bool activating) => mainButtonOBJ.transform.DOLocalMoveY(newPos, 0.3f).OnComplete(() => 
+    {
+        ChangeLights(clr); 
+        ChangeMaterial(mat); 
+        if (activating) OnPressed.Invoke();
+        if (!activating) OnReleased.Invoke();
+    });
     void ChangeLights(Color clr)
     {
         L1.color = clr;

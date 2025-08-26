@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LightToggle : MonoBehaviour
 {
@@ -7,12 +8,18 @@ public class LightToggle : MonoBehaviour
     public Light A3;
     public Light A4;
 
+    public bool isUnlocked = false;
+    public UnityEvent onUnlock;
+
     public void GreenLight()
     {
+        if (isUnlocked ) { return; }
         A1.color = Color.green;
         A2.color = Color.green;
         A3.color = Color.green;
         A4.color = Color.green;
+        isUnlocked = true;
+        onUnlock.Invoke();
     }
     public void RedLight()
     {
