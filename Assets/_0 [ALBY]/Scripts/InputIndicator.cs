@@ -19,8 +19,11 @@ public class InputIndicator : MonoBehaviour
         buttonImg = GetComponent<Image>();
         if (buttonImg != null) clrReleased = buttonImg.color;
         buttonLabel = GetComponentInChildren<TMP_Text>();
-        if (txtReleased != null) txtReleased = buttonLabel.color;
-        buttonLabel.text = key.ToString();
+        if (buttonLabel != null)
+        {
+            txtReleased = buttonLabel.color;
+            buttonLabel.text = key.ToString();
+        }
     }
 
     private void Update()
