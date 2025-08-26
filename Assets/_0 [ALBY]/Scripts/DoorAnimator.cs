@@ -27,6 +27,7 @@ public class DoorAnimator : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnSingleUnlock;
     public UnityEvent OnFullUnlock;
+    public UnityEvent OnDoorToggle;
 
     private void Start() => UnlockDoor();
     public void ToggleDoorsOverride()
@@ -47,6 +48,7 @@ public class DoorAnimator : MonoBehaviour
             case true: CloseDoors(); break;
             case false: OpenDoors(); break;
         }
+        OnDoorToggle.Invoke();
     }
     private void OpenDoors()
     {
