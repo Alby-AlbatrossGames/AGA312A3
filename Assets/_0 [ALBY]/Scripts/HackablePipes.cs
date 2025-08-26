@@ -18,7 +18,7 @@ public class HackablePipes : MonoBehaviour
         isEnabled = true;
         OnEnabled.Invoke();
         L1.color = Color.green;
-        popup.text = "Active";
+        popup.text = "Running";
         key.color = Color.red;
     }
 }
