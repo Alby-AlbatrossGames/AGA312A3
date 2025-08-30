@@ -1,16 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PistonController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public bool isActive = false;
+    public UnityEvent OnActivated;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void Activate() { isActive = true; OnActivated.Invoke(); }
 }
