@@ -28,6 +28,8 @@ public class DoorAnimator : MonoBehaviour
     public UnityEvent OnSingleUnlock;
     public UnityEvent OnFullUnlock;
     public UnityEvent OnDoorToggle;
+    public UnityEvent OnDoorOpenONCE;
+    private bool onceDoorOpen = false;
 
     private void Start() => UnlockDoor();
     public void ToggleDoorsOverride()
@@ -40,9 +42,9 @@ public class DoorAnimator : MonoBehaviour
     }
     public void ToggleDoors()
     {
-        Debug.LogWarning("ToggleDoors Ran");
         if (!isUnlocked) return;
-        Debug.LogWarning("isUnlocked = " + isUnlocked);
+        if (!onceDoorOpen) { OnDoorOpenONCE.Invoke(); onceDoorOpen = true; }
+
         switch (isOpen)
         {
             case true: CloseDoors(); break;
